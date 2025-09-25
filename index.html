@@ -6,9 +6,11 @@
     <title>AR model</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
-        
       body {
-        background-color: greenyellow;
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/24/Til_Schweiger_-_2020.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         color: white;
         display: flex;
         flex-direction: column;
@@ -20,23 +22,23 @@
 
       model-viewer {
         width: 80%;
-        height: 50%; /* Ensures it takes 50% of the screen height */
-        min-height: 300px; /* Sets a minimum height of 300px */
-        max-width: 800px; /* Sets a maximum width of 800px */
+        height: 50%;
+        min-height: 300px;
+        max-width: 800px;
         margin: 20px 0;
-        background-color: rgb(21, 0, 255);
-        flex-shrink: 0; /* Prevents shrinking of the model-viewer */
+        background-color: rgba(21, 0, 255, 0.7);
+        flex-shrink: 0;
       }
 
       .text-box {
-        width: 80%; /* Same width as model-viewer */
+        width: 80%;
         padding: 20px;
         margin: 20px 0;
-        background-color: rgb(11, 69, 241);
-        max-width: 800px; /* Sets a maximum width of 800px */
+        background-color: rgba(11, 69, 241, 0.8);
+        max-width: 800px;
         color: rgb(174, 240, 8);
         text-align: left;
-        box-sizing: border-box; /* Ensures padding doesn't affect width */
+        box-sizing: border-box;
         margin-bottom: 20px;
         font-family: cursive;
       }
@@ -45,26 +47,26 @@
         margin: 10;
         padding: 10px;
         color: black;
+        background-color: rgba(255, 255, 255, 0.7);
       }
     </style>
   </head>
   <body>
-<H2>Lorettis Projekt</H2>
-  <model-viewer src="Lorettas_3D_bums.glb"
-                ios-src="Lorettas_3D_bums.usdz.usdz"
-                alt="Lorettas_Projekt"
-                ar
-                auto-rotate
-                camera-controls
-                autoplay
-                animation-loop
-                animation-name="CubeAction"
-                ar-modes="webxr scene-viewer quick-look" 
-                environment-image="neutral">   
-  </model-viewer>
-  <div class="text-box">
-    Herzlich Willkomen xx.
-  </div>
-   
-</body>
+    <h2>Lorettis Projekt</h2>
+    <model-viewer src="Lorettas_3D_bums.glb"
+                  ios-src="Lorettas_3D_bums.usdz.usdz"
+                  alt="Lorettas_Projekt"
+                  ar
+                  auto-rotate
+                  camera-controls
+                  autoplay
+                  animation-loop
+                  animation-name="CubeAction"
+                  ar-modes="webxr scene-viewer quick-look"
+                  environment-image="neutral">   
+    </model-viewer>
+    <div class="text-box">
+      Herzlich Willkommen xx.
+    </div>
+  </body>
 </html>
