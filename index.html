@@ -7,36 +7,37 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
       body {
-        body {
-  background-image: url('DEIN-BILD-LINK.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-}
+        background-image: url('DEIN-BILD-LINK.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
+      .model-container {
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 255, 0.5); /* Blau mit Transparenz */
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Schatten */
       }
 
       model-viewer {
-        width: 80%;
-        height: 50%;
+        width: 100%;
+        height: auto;
         min-height: 300px;
-        max-width: 800px;
-        margin: 20px 0;
         background-color: rgba(21, 0, 255, 0.7);
-        flex-shrink: 0;
       }
 
       .text-box {
         width: 80%;
         padding: 20px;
-        margin: 20px 0;
+        margin: 20px auto;
         background-color: rgba(11, 69, 241, 0.8);
         max-width: 800px;
         color: rgb(174, 240, 8);
         text-align: left;
         box-sizing: border-box;
-        margin-bottom: 20px;
         font-family: cursive;
       }
 
@@ -45,25 +46,28 @@
         padding: 10px;
         color: black;
         background-color: rgba(255, 255, 255, 0.7);
+        font-style: italic; /* Headline kursiv */
       }
     </style>
   </head>
   <body>
     <h2>Lorettis Projekt</h2>
-    <model-viewer src="Lorettas_3D_bums.glb"
-                  ios-src="Lorettas_3D_bums.usdz.usdz"
-                  alt="Lorettas_Projekt"
-                  ar
-                  auto-rotate
-                  camera-controls
-                  autoplay
-                  animation-loop
-                  animation-name="CubeAction"
-                  ar-modes="webxr scene-viewer quick-look"
-                  environment-image="neutral">   
-    </model-viewer>
+    <div class="model-container">
+      <model-viewer src="Lorettas_3D_bums.glb"
+                    ios-src="Lorettas_3D_bums.usdz.usdz"
+                    alt="Lorettas_Projekt"
+                    ar
+                    auto-rotate
+                    camera-controls
+                    autoplay
+                    animation-loop
+                    animation-name="CubeAction"
+                    ar-modes="webxr scene-viewer quick-look"
+                    environment-image="neutral">   
+      </model-viewer>
+    </div>
     <div class="text-box">
-      <a href="https://kristinaisla.github.io/projekt-/>">Kristina</a> 
+      <a href="https://kristinaisla.github.io/projekt-/">Kristina</a> 
        &#x1F48E; WEBRING &rarr; <a href="https://schninnaa.github.io/Daisy/">Kristina</a>
     </div>
   </body>
